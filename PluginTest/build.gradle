@@ -26,7 +26,7 @@ android {
 
     defaultConfig {
         if (SELF_TEST.equals("YES")) {
-            applicationId pluginAddrAppID
+            applicationId pluginTestAppID
         }
         minSdkVersion Integer.parseInt(minSDKVer)
         targetSdkVersion Integer.parseInt(targetSDKVer)
