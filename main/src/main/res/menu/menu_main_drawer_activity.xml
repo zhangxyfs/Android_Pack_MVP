@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_left_first"
+            android:title="vbnb_default_first_str" />
+        <item
+            android:id="@+id/nav_left_second"
+            android:title="vbnb_default_second_str" />
+        <item
+            android:id="@+id/nav_center"
+            android:title="@string/EBlog_str" />
+        <item
+            android:id="@+id/nav_right_first"
+            android:title="@string/vbnb_default_fifth_str" />
+        <item
+            android:id="@+id/nav_right_second"
+            android:title="@string/vbnb_default_four_str" />
+
+        <item
+            android:id="@+id/fragment_file_main"
+            android:visible="false" />
+    </group>
+</menu>

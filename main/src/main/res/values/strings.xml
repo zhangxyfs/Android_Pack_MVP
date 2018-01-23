@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">APM</string>
+    <string name="vbnb_default_first_str">消息</string>
+    <string name="vbnb_default_second_str">通讯录</string>
+    <string name="vbnb_default_four_str">应用</string>
+    <string name="vbnb_default_fifth_str">我的</string>
+    <string name="EBlog_str">事事</string>
+    <string name="login_phone_str">手机号登录</string>
+    <string name="login_code_str">验证码登录</string>
+    <string name="login_mail_str">邮箱登录</string>
+    <string name="login_countryarea_str">国家/地区</string>
+    <string name="china_str">中国</string>
+    <string name="login_please_input_phone_str">请输入手机号码</string>
+    <string name="email_str">邮箱</string>
+    <string name="login_you_reg_mail_str">您注册的邮箱</string>
+    <string name="password_str">密码</string>
+    <string name="please_enter_pwd_str">请输入6到20位密码</string>
+    <string name="check_code_str">验证码</string>
+    <string name="enter_check_code_str">输入验证码</string>
+    <string name="get_check_code_str">获取验证码</string>
+    <string name="login_str">登录</string>
+    <string name="login_new_user_reg_str">新用户注册</string>
+    <string name="forget_pwd_str">忘记密码</string>
+    <string name="login_phone_num_error_str">您填写的手机号码有误</string>
+    <string name="login_enter_phonenum_error_str">您填写的手机号码有误</string>
+    <string name="login_email_error_str">邮箱不符合规则</string>
+    <string name="login_ns_send_str">%1$dS后重发</string>
+</resources>

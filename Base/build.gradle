@@ -1,0 +1,103 @@
+apply from: "../info/paramsBase.gradle"
+apply from: "../info/lib.gradle"
+
+apply plugin: pluginLibrary
+apply plugin: pluginKotlin
+apply plugin: pluginKotlinExt
+apply plugin: pluginKotlinKapt
+apply plugin: pluginObjectBox
+
+android {
+    compileSdkVersion Integer.parseInt(sdkVersion)
+    buildToolsVersion toolsVersion
+    useLibrary 'org.apache.http.legacy'
+
+    configurations.all {
+        resolutionStrategy.force "com.google.code.findbugs:jsr305:$jsr305Ver"
+    }
+
+//    greendao {
+//        schemaVersion Integer.parseInt(dbVer)
+//        targetGenDir greenTargetGenDir
+//        daoPackage greenDaoPackage
+//    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            java.srcDirs += 'build/generated/source/objectbox'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(minSDKVer)
+        targetSdkVersion Integer.parseInt(targetSDKVer)
+        versionCode Integer.parseInt(verCode)
+        versionName verName
+        multiDexEnabled true
+        manifestPlaceholders = [VERSION_CODE  : Integer.parseInt(verCode),
+                                VERSION_NAME  : verName,
+                                DATABASE_NAME : databaseName,
+                                DATABASE_VER  : Integer.parseInt(dbVer),
+                                EASEMOB_APPKEY: easemobId]
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //排除某个间接依赖
+        packagingOptions {
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/notice.txt'
+            exclude 'META-INF/license.txt'
+        }
+
+        //忽略方法数限制的检查
+        dexOptions {
+            jumboMode = true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(proguard), proguardRule
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation "junit:junit:$junitVer"
+    androidTestImplementation "com.android.support.test:runner:$testRunnerVer"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVer"
+
+    implementation "$okhttp"
+    implementation "$okhttp_url"
+    implementation "$okhttp_log"
+    implementation "$retrofit_adapter_rxjava"
+    implementation "$retrofit_converter_gson"
+    implementation "$retrofit_converter_scalars"
+    implementation "$kotlin"
+    implementation "$appcompat"
+    implementation "$design"
+
+    api "$rxlifecycle2"
+    api "$rxlifecycle2_android"
+    api "$rxlifecycle2_components"
+    api "$rxjava2"
+    api "$rxandroid"
+    api "$gson"
+    api "$retrofit"
+    api "$rxpermissions"
+    api "$rxbind"
+    api "$recycleControl"
+    api "$avi"
+    api "$object_android"
+    api "$object_kotlin"
+
+    kapt "$object_kapt"
+}

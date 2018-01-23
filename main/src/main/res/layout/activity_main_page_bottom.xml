@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mvp.view.ui.MainPageBottomActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/item_size_52"
+        android:background="@android:color/white" />
+
+    <com.eblog.base.widget.navigation.BottomNavigationBar
+        android:id="@+id/newBottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:checkTextColor="@color/colorPrimary"
+        app:check_menu="@menu/un_check_menu_navigation"
+        app:dotIndex="0"
+        app:height="53dp"
+        app:increaseIconSize="62dp"
+        app:increaseIndex="2"
+        app:itemBackground="@color/color_nav_bg"
+        app:unCheckTextColor="@color/color_font_middle"
+        app:uncheck_menu="@menu/check_menu_navigation" />
+
+</android.support.design.widget.CoordinatorLayout>

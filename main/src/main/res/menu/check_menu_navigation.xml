@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_msg"
+        android:checked="true"
+        android:icon="@drawable/ic_bottom_left_first_up"
+        android:title="@string/vbnb_default_first_str" />
+
+    <item
+        android:id="@+id/nav_book"
+        android:icon="@drawable/ic_bottom_left_second_up"
+        android:title="@string/vbnb_default_second_str" />
+
+    <item
+        android:id="@+id/nav_things"
+        android:icon="@drawable/ic_bottom_center_up"
+        android:title="@string/EBlog_str" />
+    <item
+        android:id="@+id/nav_app"
+        android:icon="@drawable/ic_bottom_right_first_up"
+        android:title="@string/vbnb_default_four_str" />
+    <item
+        android:id="@+id/nav_mine"
+        android:icon="@drawable/ic_bottom_right_second_up"
+        android:title="@string/vbnb_default_fifth_str" />
+</menu>

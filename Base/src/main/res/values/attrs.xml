@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="bottom_navigation">
+        <attr name="check_menu" format="reference" />
+        <attr name="uncheck_menu" format="reference" />
+        <attr name="height" format="dimension" />
+        <attr name="increaseIndex" format="integer" />
+        <attr name="increaseIconSize" format="dimension" />
+        <attr name="itemBackground" format="reference" />
+        <attr name="checkTextColor" format="color" />
+        <attr name="unCheckTextColor" format="color" />
+        <attr name="dotIndex" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DotView">
+        <attr name="xls_radius" format="dimension" />
+        <attr name="xls_circle_color" format="color" />
+        <attr name="xls_max_stretch_length" format="dimension" />
+        <attr name="xls_content" format="string" />
+        <attr name="xls_text_size" format="dimension" />.
+        <attr name="xls_content_color" format="color" />.
+    </declare-styleable>
+</resources>

@@ -1,0 +1,38 @@
+ext {
+    junit = "junit:junit:$junitVer"
+    testRunner = "com.android.support.test:runner:$testRunnerVer"
+    testEspresso = "com.android.support.test.espresso:espresso-core:$espressoVer"
+    kapt_butterknife = "com.jakewharton:butterknife-compiler:$butterknifeVer"
+
+    kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVer"
+    appcompat = "com.android.support:appcompat-v7:$androidVer"
+    design = "com.android.support:design:$androidVer"
+    support_v4 = "com.android.support:support-v4:$androidVer"
+
+    okhttp = "com.squareup.okhttp3:okhttp:$okhttpVer"
+    okhttp_url = "com.squareup.okhttp3:okhttp-urlconnection:$okhttpVer"
+    okhttp_log = "com.squareup.okhttp3:logging-interceptor:$okhttpVer"
+
+    retrofit = "com.squareup.retrofit2:retrofit:$retrofit2Ver"
+    retrofit_adapter_rxjava = "com.squareup.retrofit2:adapter-rxjava2:$retrofit2Ver"
+    retrofit_converter_gson = "com.squareup.retrofit2:converter-gson:$retrofit2Ver"
+    retrofit_converter_scalars = "com.squareup.retrofit2:converter-scalars:$retrofit2Ver"
+
+    rxlifecycle2 = "com.trello.rxlifecycle2:rxlifecycle:$rxlifecycle2Ver"
+    rxlifecycle2_android = "com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycle2Ver"
+    rxlifecycle2_components = "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycle2Ver"
+
+    rxjava2 = "io.reactivex.rxjava2:rxjava:$rxjavaVer"
+    rxandroid = "io.reactivex.rxjava2:rxandroid:$rxandroidVer"
+    gson = "com.google.code.gson:gson:$gsonVer"
+    rxpermissions = "com.tbruyelle.rxpermissions2:rxpermissions:$rxpermissions2Ver@aar"
+    rxbind = "com.jakewharton.rxbinding2:rxbinding:$rxbindVer"
+    recycleControl = "com.z7dream:android_recycler_control:$recycleControlVer"
+    butterknife = "com.jakewharton:butterknife:$butterknifeVer"
+    greendao = "org.greenrobot:greendao:$greenDaoVer"
+    greendao_generator = "org.greenrobot:greendao-generator:$greenDaoVer"
+    avi = "com.wang.avi:library:$aviVer"
+    object_android = "io.objectbox:objectbox-android:$objboxVer"
+    object_kotlin = "io.objectbox:objectbox-kotlin:$objboxVer"
+    object_kapt = "io.objectbox:objectbox-processor:$objboxVer"
+}

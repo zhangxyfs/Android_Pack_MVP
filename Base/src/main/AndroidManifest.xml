@@ -1,0 +1,53 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.z7dream.apm.base">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <!-- 版本号 -->
+        <meta-data
+            android:name="versionCode"
+            android:value="${VERSION_CODE}" />
+        <!-- 版本名 -->
+        <meta-data
+            android:name="versionName"
+            android:value="${VERSION_NAME}" />
+        <!-- 数据库名 -->
+        <meta-data
+            android:name="dbName"
+            android:value="${DATABASE_NAME}" />
+        <!-- 数据库版本号 -->
+        <meta-data
+            android:name="dbVersion"
+            android:value="${DATABASE_VER}" />
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="${EASEMOB_APPKEY}" />
+        <!-- 友盟统计APPKEY -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59755f02734be434d0001009" />
+        <!-- 友盟统计多渠道打包 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="official" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.eblog.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

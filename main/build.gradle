@@ -1,0 +1,152 @@
+apply from: "../info/paramsBase.gradle"
+apply from: "../info/lib.gradle"
+
+apply plugin: pluginAppli
+apply plugin: pluginKotlin
+apply plugin: pluginKotlinExt
+apply plugin: pluginKotlinKapt
+apply plugin: pluginObjectBox
+
+android {
+    compileSdkVersion Integer.parseInt(sdkVersion)
+    buildToolsVersion toolsVersion
+
+    configurations.all {
+        resolutionStrategy.force "com.google.code.findbugs:jsr305:$jsr305Ver"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId hostAppID
+        minSdkVersion Integer.parseInt(minSDKVer)
+        targetSdkVersion Integer.parseInt(targetSDKVer)
+        versionCode Integer.parseInt(verCode)
+        versionName verName
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //排除某个间接依赖
+        packagingOptions {
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/notice.txt'
+            exclude 'META-INF/license.txt'
+        }
+
+        //忽略方法数限制的检查
+        dexOptions {
+            jumboMode = true
+        }
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+        }
+
+
+
+        /*
+        signingConfigs {
+            release {
+
+            }
+        }
+
+        buildTypes {
+            debug {
+                // 显示Log
+                buildConfigField "boolean", "LOG_DEBUG", "true"
+                versionNameSuffix "-debug"
+                // 是否进行混淆
+                minifyEnabled false
+
+                //签名配置
+                signingConfig signingConfigs.release
+            }
+
+            release {
+                // 不显示Log
+                buildConfigField "boolean", "LOG_DEBUG", "false"
+                // 是否进行混淆
+                minifyEnabled false
+                //是否zip对齐
+                zipAlignEnabled true
+                // 移除无用的resource文件
+                shrinkResources false
+                //混淆配置文件
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                //签名配置
+                signingConfig signingConfigs.release
+
+
+                applicationVariants.all { variant ->
+                    variant.outputs.all {
+                        outputFileName = "$appName}_v$verName}_$verCode}.apk"
+                    }
+                }
+            }
+
+            // 签名处理
+            File propFile = file('../info/signing.properties');
+            if (propFile.exists()) {
+                def Properties props = new Properties()
+                props.load(new FileInputStream(propFile))
+                if (props.containsKey('STORE_FILE') && props.containsKey('STORE_PASSWORD') &&
+                        props.containsKey('KEY_ALIAS') && props.containsKey('KEY_PASSWORD')) {
+                    android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
+                    android.signingConfigs.release.storePassword = props['STORE_PASSWORD']
+                    android.signingConfigs.release.keyAlias = props['KEY_ALIAS']
+                    android.signingConfigs.release.keyPassword = props['KEY_PASSWORD']
+                    android.signingConfigs.release.v2SigningEnabled = props['V2SIGNING_ENABLED']
+                } else {
+                    android.buildTypes.release.signingConfig = null
+                }
+            } else {
+                android.buildTypes.release.signingConfig = null
+            }
+        }
+        */
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(proguard), proguardRule
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+//    flavorDimensions 'demo'
+//
+//    productFlavors {
+//        demo {
+//            dimension 'demo'
+//            applicationIdSuffix ".demo"
+//            versionNameSuffix "-demo"
+//        }
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':Base')
+    if (SELF_TEST.equals("NO")) {
+        implementation project(':PluginTest')
+    }
+
+    testImplementation "$junit"
+    androidTestImplementation "$testRunner"
+    androidTestImplementation "$testEspresso"
+
+    implementation "$kotlin"
+    implementation "$appcompat"
+    implementation "$design"
+}

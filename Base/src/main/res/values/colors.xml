@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">@color/color_white</color>
+
+    <!--主色-->
+    <!--用于特别强调突出的文字、标签和icon-->
+    <color name="color_high_light">@color/colorPrimary</color>
+    <!--状态栏颜色-->
+    <color name="color_status_bar">@color/colorPrimaryDark</color>
+
+    <!--副色-->
+    <!--用于部分图标信息更新状态提醒等-->
+    <!--#FFE8382B-->
+    <color name="color_update">#E8382B</color>
+    <!--用于俩的颜色，如开关色-->
+    <color name="color_bright">#BBDEFB</color>
+    <!--背景色-->
+    <color name="color_background">#F5F6F7</color>
+    <color name="color_translucent_background">#60000000</color>
+    <color name="color_btn_unenable">#C8C8C8</color>
+
+    <!--分割线-->
+    <color name="color_divider">#D8D8D8</color>
+    <!--强调色，如企业公告-->
+    <color name="color_emphasize">#93DEE9</color>
+    <!--白色：对话框、搜索框等-->
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <!--绿色icon-->
+    <color name="color_icon">#45CB7F</color>
+    <!--黄色：用于推荐收藏等-->
+    <color name="color_collect">#FEA900</color>
+
+    <color name="color_orange">#FF7B03</color>
+
+    <!--文字颜色-->
+    <color name="color_font_high">#1A1A1C</color>
+    <color name="color_font_middle">#999999</color>
+    <color name="color_font_low">#b2b2b2</color>
+    <color name="color_font_hint">#8B1a1a1c</color>
+    <color name="color_font_blue">#2196F3</color>
+    <color name="color_font_gray">#666666</color>
+
+    <!--半透明-->
+    <color name="color_half_000000">#80000000</color>
+    <color name="color_chat_text_tabs">#b3ffffff</color> <!-- 70%白 -->
+    <color name="color_font_high_half">#CC1A1A1C</color>
+    <color name="color_half_gary">#B2D8D8D8</color>
+
+    <!-- checkBox 未选中颜色-->
+    <color name="color_gray">#979797</color>
+
+    <!--shadow-->
+    <color name="color_shadow_pic">#666666</color>
+
+    <!--任务item顶部背景色-->
+    <color name="color_task_top_bg">#E2F0FE</color>
+    <color name="color_task_top_textcolor_blue">#2196F3</color>
+    <color name="color_task_top_textcolor_red">#E8382B</color>
+    <color name="color_task_top_textcolor_green">#63B953</color>
+    <color name="color_task_top_textcolor_blone">#00BCD4</color>
+    <color name="color_task_top_textcolor_redone">#E8382B</color>
+    <color name="color_task_top_textcolor_yellow">#FEA900</color>
+    <color name="color_task_green">#00BCD4</color>
+
+    <color name="color_no_net_back">#FFD4D1</color>
+
+    <!--excel导出页面-->
+    <color name="color_F8F8FF">#F8F8FF</color>
+    <color name="color_f6f6f9">#f6f6f9</color>
+
+    <color name="wheel_unselect_text">#c2c1c1</color>
+    <color name="wheel_bg">#f2f2f2</color>
+    <color name="violet">#6766FF</color>
+    <color name="orange">#FF8111</color>
+
+    <color name="cutting_line">#dfdfdf</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="button_ensure">#ff6000</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#ffccddff</color>
+    <color name="grey">#58616d</color>
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+
+    <color name="color_font_blue_half">#9ED2F9</color>
+    <color name="color_font_blue_half_1">#E8F4FD</color>
+
+    <color name="color_font_orange_half">#FF7B03</color>
+    <color name="color_font_orange_half_1">#FFF1E5</color>
+    <color name="early_warning_text_background">#FEEEEE</color>
+    <color name="black_deep">#FF000000</color>
+
+    <color name="color_creator">#FFFEA900</color>
+    <color name="color_admin">#FF2196F3</color>
+    <color name="color_usesr">#FF00BCD4</color>
+    <color name="color_nav_bg">#F9F9F9</color>
+    <color name="color_dot">#D3321B</color>
+
+</resources>

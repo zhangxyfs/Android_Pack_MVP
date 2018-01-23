@@ -1,0 +1,16 @@
+<resources>
+    <string name="nav_back_again_finish">再按一次退出程序</string>
+    <string name="more_str">更多</string>
+    <string name="no_net_str">网络好像不给力，联网后，再次点击试试~</string>
+    <string name="no_data_str">暂时没有数据</string>
+    <string name="no_prepare_str">没准备好的时候，可以存到这里~</string>
+    <string name="rule_password">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`¬!"£$%^*()~=#{}[];':,./?/*-_+&#060;&#062;&#064;&#038;</string>
+    <string name="login_input_name_str">请输入用户名</string>
+    <string name="login_input_pwd_str">请输入密码</string>
+    <string name="login_input_check_str">请输入验证码</string>
+    <string name="please_wait_str">请稍等...</string>
+    <string name="data_format">%1$d-%2$d-%3$d</string>
+    <string name="data_time_format">%1$d-%2$d-%3$d %4$s:%5$s</string>
+    <string name="cancel">取消</string>
+    <string name="ensure">确定</string>
+</resources>

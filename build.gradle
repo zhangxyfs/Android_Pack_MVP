@@ -1,0 +1,28 @@
+buildscript {
+    apply from: "info/paramsBase.gradle"
+
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven { url "http://objectbox.net/beta-repo/" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradleVer"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVer"
+        classpath "io.objectbox:objectbox-gradle-plugin:$objboxVer"
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven { url "http://objectbox.net/beta-repo/" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

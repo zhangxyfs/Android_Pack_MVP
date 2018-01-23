@@ -1,0 +1,70 @@
+Properties baseProperties = new Properties()
+baseProperties.load(project.rootProject.file("info/pro_base.properties").newDataInputStream())
+
+Properties configProperties = new Properties()
+configProperties.load(project.rootProject.file("info/pro_config.properties").newDataInputStream())
+
+Properties pluginProperties = new Properties()
+pluginProperties.load(project.rootProject.file("info/pro_plugin.properties").newDataInputStream())
+
+Properties libVerProperties = new Properties()
+libVerProperties.load(project.rootProject.file("info/lib_version.properties").newDataInputStream())
+
+ext {
+    sdkVersion = baseProperties.getProperty("base.compileSdkVersion")
+    toolsVersion = baseProperties.getProperty("base.buildToolsVersion")
+    hostAppID = baseProperties.getProperty("base.applicationId_host")
+    pluginTestAppID = baseProperties.getProperty("base.applicationId_plugin_test")
+    minSDKVer = baseProperties.getProperty("base.minSdkVersion")
+    targetSDKVer = baseProperties.getProperty("base.targetSdkVersion")
+    proguard = baseProperties.getProperty("base.proguardFilesTXT")
+    proguardRule = baseProperties.getProperty("base.proguardFilesPRO")
+    greenTargetGenDir = baseProperties.getProperty("base.targetGenDir")
+    greenDaoPackage = baseProperties.getProperty("base.daoPackage")
+    databaseName = baseProperties.getProperty("base.databaseName")
+    appName = baseProperties.getProperty("base.app_name")
+    
+    //--------------------------------------------------------------------------------
+    
+    verCode = configProperties.getProperty("project.versionCode")
+    verName = configProperties.getProperty("project.versionName")
+    dbVer = configProperties.getProperty("project.schemaVersion")
+    easemobId = configProperties.getProperty("develop.easemobId")
+    
+    //--------------------------------------------------------------------------------
+    
+    pluginAppli = pluginProperties.getProperty("plugin.androidAppli")
+    pluginLibrary = pluginProperties.getProperty("plugin.library")
+    pluginKotlin = pluginProperties.getProperty("plugin.kotlin")
+    pluginKotlinExt = pluginProperties.getProperty("plugin.kotlinExt")
+    pluginGreenDao = pluginProperties.getProperty("plugin.greenDao")
+    pluginLambda = pluginProperties.getProperty("plugin.lambda")
+    pluginButterKnife = pluginProperties.getProperty("plugin.butterknife")
+    pluginKotlinKapt = pluginProperties.getProperty("plugin.kotlin.kapt")
+    pluginObjectBox = pluginProperties.getProperty("plugin.objectBox")
+
+    //--------------------------------------------------------------------------------
+
+    gradleVer = libVerProperties.getProperty("ver.gradle")
+    kotlinVer = libVerProperties.getProperty("ver.kotlin")
+    lambdaVer = libVerProperties.getProperty("ver.lambda")
+    greenDaoVer = libVerProperties.getProperty("ver.greendao")
+    butterknifeVer = libVerProperties.getProperty("ver.butterknife")
+
+    junitVer = libVerProperties.getProperty("ver.junit")
+    testRunnerVer = libVerProperties.getProperty("ver.testRunner")
+    espressoVer = libVerProperties.getProperty("ver.espresso")
+    okhttpVer = libVerProperties.getProperty("ver.okhttp")
+    retrofit2Ver = libVerProperties.getProperty("ver.retrofit2")
+    rxlifecycle2Ver = libVerProperties.getProperty("ver.rxlifecycle2")
+    rxjavaVer = libVerProperties.getProperty("ver.rxjava")
+    rxandroidVer = libVerProperties.getProperty("ver.rxandroid")
+    gsonVer = libVerProperties.getProperty("ver.gson")
+    rxpermissions2Ver = libVerProperties.getProperty("ver.rxpermissions2")
+    jsr305Ver = libVerProperties.getProperty("ver.jsr305")
+    androidVer = libVerProperties.getProperty("ver.android")
+    rxbindVer = libVerProperties.getProperty("ver.rxbindVer")
+    recycleControlVer = libVerProperties.getProperty("ver.recycleControlVer")
+    aviVer = libVerProperties.getProperty("ver.aviVer")
+    objboxVer = libVerProperties.getProperty("ver.objectBoxVer")
+}
