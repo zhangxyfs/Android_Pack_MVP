@@ -1,6 +1,6 @@
 # Android_Pack_MVP
-### android 可以分包编译的MVP 框架
-
+### android 可以分包编译的MVP框架（组件化）
+ 
 #### 原理如下：
 模块分为：main、Base、pluginXXX
 
@@ -19,3 +19,6 @@
 
 #### 调用方式：
 看例子：PluginTest即可
+ 
+#### 正在实现的功能：
+- 路由功能，Router （暂时使用JumpAct类来替代）
